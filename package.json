@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "front and back project crafter",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Blazentor/craftsman"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
