@@ -4,5 +4,8 @@
     },
     "react-app":{
         "name": "react-app"
+    },
+    "vue-cli":{
+        "name": "vue-cli"
     }
 }

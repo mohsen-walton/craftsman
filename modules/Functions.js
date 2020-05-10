@@ -94,11 +94,15 @@ const bootStrap = (dirPath) => {
     console.log(chalk.red("Path not exist! please enter the valid path"));
   }
 };
+/**
+ * this function create react-app using => npx create-react-app
+ * @param {string} dirPath 
+ */
 const react = (dirPath) => {
   console.log(
     chalk.green("crafting react app ,this may take a few minutes . . .")
   );
-  exec("npx create-react-app " + dirPath, (error, stdout, stderr) => {
+  exec( "npx create-react-app " + dirPath, (error, stdout, stderr) => {
     if (error) {
       console.log(chalk.red(error.message));
     }
@@ -114,7 +118,32 @@ const react = (dirPath) => {
     );
   });
 };
+/**
+ * this function create vue-cli app using => vue create
+ * @param {string} dirPath 
+ */
+const vueCli = (dirPath) =>{
+  console.log(
+    chalk.green("crafting simple vue ,this may take a few minutes . . .")
+  );
+  exec("vue create vue-app -d",{ cwd: dirPath } ,(error, stdout, stderr) => {
+    if (error) {
+      console.log(chalk.red(error.message));
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(
+      `stdout: ${stdout} \n` +
+        chalk.green(
+          "Application crafted! dont forget to install dependency 'npm i'"
+        )
+    );
+  });
 
+}
 exports.bootStrap = bootStrap;
 exports.react = react;
+exports.vueCli = vueCli;
 

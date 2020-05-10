@@ -35,6 +35,9 @@ function craftsMan(path, frameWork, list) {
     case names["react-app"]["name"]:
       func.react(path);
       break;
+    case names["vue-cli"]["name"]:
+      func.vueCli(path);
+      break;
     default:
       console.log(chalk.green("use -l or --list to get list of frameworks"));
       break;
